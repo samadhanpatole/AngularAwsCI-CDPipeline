@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "Checking node and npm versions..."
+      - node -v
+      - npm -v
+      - echo "Installing dependencies..."
+      - npm ci --legacy-peer-deps
+
+  build:
+    commands:
+      - echo "Building the Anguler application..."
+      - npx ng build
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist/myapp
+  discard-paths: no
