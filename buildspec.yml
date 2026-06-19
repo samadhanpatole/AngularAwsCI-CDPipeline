@@ -19,8 +19,5 @@ phases:
 artifacts:
   files:
     - '**/*'
-base-directory: dist/MYAPP/browser
+  base-directory: dist/MYAPP/browser
   discard-paths: no
-
-  
-
